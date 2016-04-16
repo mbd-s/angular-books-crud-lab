@@ -33,4 +33,6 @@ function BooksShowController($http, $routeParams, $location) {
       console.log('Error updating the book', response);
     });
   };
+
+  //TODO write deleteBook() function
 }

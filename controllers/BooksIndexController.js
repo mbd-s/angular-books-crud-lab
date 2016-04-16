@@ -14,6 +14,7 @@ function BooksIndexController( $http ) {
     console.log('Error getting the books', response);
   });
 
+//TODO write addBook() function
   // $http({
   //   method: 'POST',
   //   url: endpoint
