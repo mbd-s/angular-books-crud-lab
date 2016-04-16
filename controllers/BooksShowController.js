@@ -6,11 +6,11 @@ BooksShowController.$inject=['$http', '$routeParams', '$location'];
 function BooksShowController($http, $routeParams, $location) {
   var vm = this;
   vm.newBook = {};
-  var endpoint = 'https://super-crud.herokuapp.com/books';
+  var endpoint = 'https://super-crud.herokuapp.com/books/';
 
   $http({
     method: 'GET',
-    url: endpoint + '/' + $routeParams.id
+    url: endpoint + $routeParams.id
   }).then(function successCallback(json){
     vm.book = json.data;
   });

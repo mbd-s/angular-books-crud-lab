@@ -1,9 +1,56 @@
+<section id='album-form' class="container">
+      <div class="row">
+      <div class="col-md-9">
 
-<h2>Library Books</h2>
+        <form class="form-horizontal">
+          <fieldset>
+
+            <legend>Add a new book</legend>
+
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="title">Title</label>
+              <div class="col-md-4">
+              <input id="name" name="name" type="text" placeholder="" class="form-control input-md" required="">
+
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="author">Author</label>
+              <div class="col-md-4">
+              <input id="textinput" name="author" type="text" placeholder="" class="form-control input-md">
+
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="releaseDate">Release Date</label>
+              <div class="col-md-4">
+              <input id="releaseDate" name="releaseDate" type="text" placeholder="" class="form-control input-md">
+
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="image">Cover</label>
+              <div class="col-md-4">
+                <input id="image" name="image" type="text" placeholder="" class="form-control input-md">
+              </div>
+                <button class='btn btn-primary' ng-click="booksIndexCtrl.createBook(book)">Submit</button>
+              </div>
+
+            <div class="form-group">
+              <div class="col-sm-offset-8">
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+      </div>
+    </section>
 
 
 
-    <button class='btn btn-danger' ng-click="booksIndexCtrl.createBook(book)">Add a book</button>
 
 
 
