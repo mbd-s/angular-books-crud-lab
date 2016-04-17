@@ -34,5 +34,15 @@ function BooksShowController($http, $routeParams, $location) {
     });
   };
 
-  //TODO write deleteBook() function
+  vm.deleteBook = function(bookToDelete){
+    $http({
+    method: 'DELETE',
+    url: 'https://super-crud.herokuapp.com/books/' + bookToDelete._id
+  }).then(function onBookDeleteSuccess(response){
+    console.log('Book successfully deleted', response.data);
+    $location.path('/');
+  }, function onBookDeleteError(response){
+    console.log('Error deleting the book', response);
+    });
+  };
 }
